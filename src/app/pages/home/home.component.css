@@ -1,12 +1,12 @@
 
-html{
+body{
   background-color: #04012A;
 }
 #Home{
     margin-top: 100px;
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 70px;
 }
 
@@ -14,7 +14,7 @@ html{
     margin-top: 100px;
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 70px;
 }
 
@@ -22,7 +22,7 @@ html{
   margin-top: 100px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 70px;
 }
 
@@ -39,7 +39,7 @@ html{
     transition: 0.3s;
 }
 #fav a:hover{
-    background-color: #04012A;
+    background-color: #07015a;
 }
 
 
@@ -48,7 +48,7 @@ html{
    margin-top: 100px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 70px;
 }
 
@@ -65,5 +65,5 @@ html{
     transition: 0.3s;
 }
 #preview a:hover{
-    background-color: #04012A;
+    background-color: #07015a;
 }
