@@ -1,19 +1,49 @@
-<div id="Home">
-  <h1 class="Home">Happy Birthday</h1>
-  <p>Wishing you joy, love, and happiness today & always 💖</p>
+<body>
+  <section id="Home">
+    <div class="title">
+      <h1>Happy Birthday</h1>
+    <p>Wishing you joy, love, and happiness today & always 💖</p>
+    </div>
+      <div  class="hero">
+      <img [src]="image2" alt="Birthday image" >
+      </div>
   <!-- this is where i would put the picture-->
-</div>
+</section>
 
-<div id="About">
-  <h1>About</h1>
+<section id="About">
+  <div class="title2">
+    <h1>About</h1>
   <p>This where i would write my wish to her</p>
-  <!--Picture of them here again-->
+  </div>
+  <div class="photo">
+    <div class="div1"><img [src]="image9"  alt="About photo"></div>
+    <div class="div2"><img [src]="image6"  alt="About photo" height="px"></div>
+    <div class="div3"><img [src]="image11"  alt="About photo" height="200px"></div>
+  </div>
+</section>
+
+<div  class="fav">
+  <h1> Favourite Picture</h1>
+  <div class="fav-images">
+    <div class="fav-photo">
+      <img [src]="image1" alt="Favourite 1" height="300px">
+      <div class="info">Jamaica day at Ochi Rios (probably my favourite photo of her)</div>
+    </div>
+    <div class="fav-photo">
+      <img [src]="image4" alt="Favourite 2" height="300px">
+      <div class="info">This is image 4</div>
+    </div>
+    <div class="fav-photo">
+      <img [src]="image3" alt="Favourite 3" height="300px">
+      <div class="info">This is image 3</div>
+    </div>
+
+  </div>
+
+<div class="fav-btn">
+  <button class="btn" routerLink="gallery">View photos from others</button>
 </div>
 
-<div id="fav">
-  <h1> Favourite Picture</h1>
-  <img src="/assest" alt="My Photo">
-  <a routerLink="gallery">See more photos</a>
 
   <!--This is where i would put their favourite pictures-->
 </div>
@@ -24,3 +54,4 @@
 
   <a routerLink="wishes">See more wishes</a>
 </div>
+</body>
