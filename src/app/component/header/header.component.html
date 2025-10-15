@@ -1,12 +1,17 @@
 <nav class="navbar">
   <div class="Name">
-    <a routerLink="">Happy Birthday</a>
+    <a routerLink="home">Happy Birthday</a>
   </div>
   <div class="location">
-    <!--<a routerLink="register">Register</a>-->
-    <a routerLink="login">Login</a>
-    <a routerLink="wishes">Wishes</a>
-    <a routerLink="gallery">Gallery</a>
+
+    <ng-container *ngIf="!isAuthenticated()">
+      <a  routerLink="">Login</a>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated()">
+      <a routerLink="wishes">Wishes</a>
+      <a routerLink="gallery">Gallery</a>
+      <a routerLink="" (click)="logout()">Logout</a>
+    </ng-container>
   </div>
 </nav>
 

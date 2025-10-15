@@ -1,17 +1,24 @@
-<div>
-    <h1 class="Contact"> Register</h1>
-    <section class="contact2">
-      <form class="contact-form">
-        <fieldset>
-            <label>Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-        </fieldset>
-        <br>
-        <fieldset>
-            <label>Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
-        </fieldset>
-  <button type="submit">Register</button>
-</form>
-</section>
+<body>
+    <div class="wrapper">
+      <form (ngSubmit)="submit()">
+        <h1>Register</h1>
+        <div class="input-box">
+            <input type="email" [(ngModel)]="form.email" placeholder="Email" name="email" />
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+             <input type="password" [(ngModel)]="form.password" placeholder="Password" name="password" />
+             <i class='bx bxs-lock-alt'></i>
+        </div>
+
+
+        <button type="submit" class="btn" *ngIf="loading">
+          Login <a routerLink="home"></a></button>
+        <div class="register-link">
+        </div>
+        <ng-container *ngIf="!loading" class="loading">
+           Logging in...
+        </ng-container>
+      </form>
 </div>
+</body>

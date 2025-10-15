@@ -1,16 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../auth.service';
+import { Component } from '@angular/core';
+import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+
+
+interface LoginForm {
+  email: string;
+  password: string;
+
+}
+
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-email: string='';
+export class LoginComponent {
 
-  constructor() { }
+  form = { email: '', password: '' };
 
-  ngOnInit(): void {
+
+  constructor(private authService: AuthService) {}
+
+  async submit() {
+
+
+    this.authService.login(this.form)
+
   }
 
+  loading(){
+    return this.authService.loading;
+  }
 }

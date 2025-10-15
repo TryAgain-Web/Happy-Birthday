@@ -140,23 +140,31 @@ body{
   grid-template-columns: auto auto auto;
   justify-content: center;
 
+
+}
+
+.fav-photo {
+  position: relative; /* anchor .info inside */
+
+  transition: all 150ms ease-in-out;
 }
 
 .fav img{
-   border-radius: 5px
+border-radius: 5px;
+  object-fit: cover;
+  transition: 0.3s ease;
 }
 
-.fav-images:has(.fav-photo:hover) .fav-photo:not(:hover) {
-  filter: blur(4px)
+.fav-images:hover .fav-photo {
+  filter: blur(4px);
+  opacity: 0.5;
 }
 
-.fav-photo{
-transition: all 150ms ease-in-out
+.fav-images:hover .fav-photo:hover {
+  filter: none;
+  opacity: 1;
 }
 
-.fav-photo::before{
-  content: "";
-}
 
 .info {
   font-size: 13px;
@@ -175,7 +183,7 @@ transition: all 150ms ease-in-out
 
 .fav-photo:hover .info {
   opacity: 1;
-  transform: translateY(0);
+
 }
 
 .fav .btn{

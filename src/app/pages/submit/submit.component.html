@@ -1,0 +1,29 @@
+<body>
+  <div class="wrapper">
+    <form (ngSubmit)="onSubmit()">
+      <h1>Submit a Wish</h1>
+
+      <!-- Name input -->
+      <div class="input-box">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <!-- Message input -->
+      <div class="input-box">
+        <textarea id="message" name="message" placeholder="Write your wish..." required></textarea>
+        <i class='bx bxs-message-detail'></i>
+      </div>
+
+      <!-- Photo input -->
+      <div class="input-box file-upload">
+       <!-- <label for="photo" class="custom-file-label">📸 Upload a Photo</label>
+        <span id="file-name">No file chosen</span>-->
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+      </div>
+
+
+      <button type="submit" class="btn" (submit)="onSubmit()">Submit Wish</button>
+    </form>
+  </div>
+</body>
