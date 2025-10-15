@@ -3,13 +3,16 @@
     <a routerLink="home">Happy Birthday</a>
   </div>
   <div class="location">
-
+<a routerLink="submit">Send a Wish</a>
     <ng-container *ngIf="!isAuthenticated()">
       <a  routerLink="">Login</a>
+
     </ng-container>
     <ng-container *ngIf="isAuthenticated()">
+
       <a routerLink="wishes">Wishes</a>
       <a routerLink="gallery">Gallery</a>
+
       <a routerLink="" (click)="logout()">Logout</a>
     </ng-container>
   </div>

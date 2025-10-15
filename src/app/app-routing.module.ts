@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'wishes', component: WishesComponent, canActivate: [AuthGuard]},
   {path: '', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'submit', component:SubmitComponent},
+  {path: 'submit', component:SubmitComponent, },
   {path: '', redirectTo: 'home', pathMatch: 'full' },
 
 ];
